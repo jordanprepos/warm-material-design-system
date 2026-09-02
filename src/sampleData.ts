@@ -109,7 +109,9 @@ export const sampleSearchResults: SearchResult[] = [
   { id: 'r2', name: 'Tanamera Coffee', location: 'Thamrin, Jakarta', matchedOn: 'Outlets · AC', ratingStr: '5.0' },
   { id: 'r3', name: 'Sagaleh', location: 'Kemang, Jakarta', matchedOn: 'Outlets · quiet after 2', ratingStr: '4.5' },
   { id: 'r4', name: 'Kopi Toko Djawa', location: 'Braga, Bandung', matchedOn: 'Outlets by the window', ratingStr: '4.5' },
-  { id: 'r5', name: 'Titik Kumpul', location: 'Senopati, Jakarta', matchedOn: 'Outlets · long tables', ratingStr: '4.0' }
+  { id: 'r5', name: 'Titik Kumpul', location: 'Senopati, Jakarta', matchedOn: 'Outlets · long tables', ratingStr: '4.0' },
+  { id: 'r6', name: 'Kalyan Kopi', location: 'Kemang, Jakarta', matchedOn: 'Outlets · manual brew bar', ratingStr: '4.0' },
+  { id: 'r7', name: 'Beranda Kopi', location: 'Bangka, Jakarta', matchedOn: 'Outlets on the patio', ratingStr: '3.5' }
 ];
 
 export const sampleProfile: ProfileStats = {

@@ -19,7 +19,7 @@ export function Switch({ checked, onChange }: SwitchProps) {
         display: 'flex',
         alignItems: 'center',
         justifyContent: checked ? 'flex-end' : 'flex-start',
-        background: checked ? 'var(--cj-primary)' : '#e3d5ca',
+        background: checked ? 'var(--cj-primary)' : 'var(--cj-switch-off)',
         cursor: onChange ? 'pointer' : undefined,
         transition: 'background .2s, justify-content .2s'
       }}

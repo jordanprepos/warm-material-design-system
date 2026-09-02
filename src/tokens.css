@@ -53,6 +53,11 @@
   /* stats: off-peak bar color */
   --cj-bar-off: #d9c4b4;
 
+  /* Switch: unchecked track — the mock only ever renders this in light
+     theme (checked coupled to dark theme in the source), so this is
+     extrapolated to fit the rest of the light token set. */
+  --cj-switch-off: #e3d5ca;
+
   --cj-shadow-card: 0 2px 10px rgba(80, 50, 30, 0.05);
   --cj-shadow-cta: 0 8px 20px rgba(107, 74, 58, 0.3);
 }
@@ -92,6 +97,8 @@
   --cj-map-road: #3a2c24;
 
   --cj-bar-off: #4a3a31;
+
+  --cj-switch-off: #463429;
 }
 
 .cj-root {
