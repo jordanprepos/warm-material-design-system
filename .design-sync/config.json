@@ -1,0 +1,31 @@
+{
+  "projectId": "71287759-2e55-47ec-97f2-262ce164bc7e",
+  "shape": "storybook",
+  "pkg": "cafe-journal-warm-material",
+  "storybookStatic": ".design-sync/sb-reference",
+  "buildCmd": "npm run build",
+  "readmeHeader": ".design-sync/conventions.md",
+  "titleMap": {
+    "Detail": "DetailScreen",
+    "Firstrun": "FirstRunScreen",
+    "Journal": "JournalScreen",
+    "Logvisit": "LogVisitScreen",
+    "Places": "PlacesScreen",
+    "Profile": "ProfileScreen",
+    "Search": "SearchScreen",
+    "Shortlist": "ShortlistScreen",
+    "Stats": "StatsScreen"
+  },
+  "overrides": {
+    "AICard": { "cardMode": "column" },
+    "DetailScreen": { "cardMode": "column" },
+    "FirstRunScreen": { "cardMode": "column" },
+    "JournalScreen": { "cardMode": "column" },
+    "LogVisitScreen": { "cardMode": "column" },
+    "PlacesScreen": { "cardMode": "column" },
+    "ProfileScreen": { "cardMode": "column" },
+    "SearchScreen": { "cardMode": "column" },
+    "ShortlistScreen": { "cardMode": "column" },
+    "StatsScreen": { "cardMode": "column" }
+  }
+}
