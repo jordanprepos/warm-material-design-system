@@ -11,10 +11,17 @@ const meta: Meta<typeof ShortlistScreen> = {
 export default meta;
 type Story = StoryObj<typeof ShortlistScreen>;
 
+const promptContent = (
+  <>
+    Three cafes near Kemang with outlets and a low-noise profile — the pattern behind your{' '}
+    <span style={{ color: 'var(--cj-amber)' }}>five highest-rated visits</span>.
+  </>
+);
+
 export const Light: Story = {
   render: () => (
     <PhoneFrame theme="light">
-      <ShortlistScreen suggestions={sampleSuggestions} />
+      <ShortlistScreen promptContent={promptContent} suggestions={sampleSuggestions} />
     </PhoneFrame>
   )
 };
@@ -22,7 +29,7 @@ export const Light: Story = {
 export const Dark: Story = {
   render: () => (
     <PhoneFrame theme="dark">
-      <ShortlistScreen suggestions={sampleSuggestions} />
+      <ShortlistScreen promptContent={promptContent} suggestions={sampleSuggestions} />
     </PhoneFrame>
   )
 };
@@ -30,7 +37,7 @@ export const Dark: Story = {
 export const Loading: Story = {
   render: () => (
     <PhoneFrame theme="light">
-      <ShortlistScreen state="loading" suggestions={[]} />
+      <ShortlistScreen state="loading" promptContent={promptContent} suggestions={[]} />
     </PhoneFrame>
   )
 };
@@ -38,7 +45,7 @@ export const Loading: Story = {
 export const ErrorState: Story = {
   render: () => (
     <PhoneFrame theme="light">
-      <ShortlistScreen state="error" suggestions={[]} />
+      <ShortlistScreen state="error" promptContent={promptContent} suggestions={[]} />
     </PhoneFrame>
   )
 };

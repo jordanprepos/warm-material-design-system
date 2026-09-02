@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { CafeVisit } from '../types';
 import { AICard } from '../components/AICard';
 import { Button } from '../components/Button';
@@ -16,6 +17,8 @@ export interface JournalScreenProps {
   sort?: JournalSort;
   onSortChange?: (sort: JournalSort) => void;
   onSearchTap?: () => void;
+  /** The AI insight card's body copy — pass a fragment to highlight a clause, e.g. with `<span style={{color: 'var(--cj-amber)'}}>`. */
+  insightContent: ReactNode;
   onInsightTap?: () => void;
   onInsightDismiss?: () => void;
   insightDismissed?: boolean;
@@ -33,6 +36,7 @@ export function JournalScreen({
   sort = 'recent',
   onSortChange,
   onSearchTap,
+  insightContent,
   onInsightTap,
   onInsightDismiss,
   insightDismissed,
@@ -90,8 +94,7 @@ export function JournalScreen({
         {!insightDismissed && (
           <div style={{ margin: '0 20px 20px' }}>
             <AICard variant="primary" eyebrow="Journal insight" decorativeCircle="top-right">
-              You rate cafes with outlets and low noise <span style={{ color: 'var(--cj-amber)' }}>0.8 stars higher</span>.
-              Three near Kemang match — want a shortlist?
+              {insightContent}
               <div style={{ marginTop: 14, display: 'flex', gap: 8 }}>
                 <Button variant="amber" size="sm" onClick={onInsightTap}>
                   Show me

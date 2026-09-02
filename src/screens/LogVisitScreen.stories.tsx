@@ -10,7 +10,7 @@ const meta: Meta<typeof LogVisitScreen> = {
 export default meta;
 type Story = StoryObj<typeof LogVisitScreen>;
 
-const initialDraft = { name: 'Tanamera Coffee', rating: 4, facilities: ['WiFi', 'Outlets', 'AC'] };
+const initialDraft = { name: 'Tanamera Coffee', location: 'Thamrin, Jakarta', rating: 4, facilities: ['WiFi', 'Outlets', 'AC'] };
 
 export const Light: Story = {
   render: () => (

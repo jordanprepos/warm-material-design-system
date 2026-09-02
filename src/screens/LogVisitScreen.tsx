@@ -6,7 +6,7 @@ import { SectionLabel } from '../components/SectionLabel';
 import { StarRating } from '../components/StarRating';
 import { TextField } from '../components/TextField';
 import { CloseIcon, ImageIcon, PinIcon } from '../icons';
-import { FACILITY_OPTIONS } from '../sampleData';
+import { FACILITY_OPTIONS } from '../types';
 
 export interface LogVisitDraft {
   name: string;
@@ -62,13 +62,7 @@ export function LogVisitScreen({ initialDraft, onClose, onSave }: LogVisitScreen
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <TextField
-            label="Cafe name"
-            placeholder="Cafe name"
-            focused={name.length > 0}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <TextField label="Cafe name" placeholder="Cafe name" value={name} onChange={(e) => setName(e.target.value)} />
           <TextField
             label="Location"
             placeholder="Location"

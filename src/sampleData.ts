@@ -120,5 +120,3 @@ export const sampleProfile: ProfileStats = {
   cafes: 11,
   avgRating: '4.3'
 };
-
-export const FACILITY_OPTIONS = ['WiFi', 'Outlets', 'Parking', 'AC', 'Outdoor', 'Pet friendly'];

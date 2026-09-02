@@ -57,7 +57,7 @@ export function AICard({
           style={{
             fontSize: 11,
             fontWeight: 800,
-            letterSpacing: '.14em',
+            letterSpacing: isPrimary ? '.14em' : '.12em',
             textTransform: 'uppercase',
             color: isPrimary ? 'var(--cj-amber)' : 'var(--cj-primary)'
           }}

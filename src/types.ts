@@ -64,3 +64,6 @@ export interface ProfileStats {
 }
 
 export type NavDestination = 'journal' | 'places' | 'stats' | 'profile';
+
+/** Exact facility options from README §3 — Log visit. */
+export const FACILITY_OPTIONS = ['WiFi', 'Outlets', 'Parking', 'AC', 'Outdoor', 'Pet friendly'] as const;

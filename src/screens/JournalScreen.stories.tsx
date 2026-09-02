@@ -23,6 +23,12 @@ function Interactive({ theme }: { theme: 'light' | 'dark' }) {
         visits={sampleVisits}
         sort={sort}
         onSortChange={setSort}
+        insightContent={
+          <>
+            You rate cafes with outlets and low noise <span style={{ color: 'var(--cj-amber)' }}>0.8 stars higher</span>. Three
+            near Kemang match — want a shortlist?
+          </>
+        }
         insightDismissed={dismissed}
         onInsightDismiss={() => setDismissed(true)}
       />

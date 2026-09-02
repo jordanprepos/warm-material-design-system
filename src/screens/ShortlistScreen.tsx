@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { Suggestion } from '../types';
 import { AICard } from '../components/AICard';
 import { Button } from '../components/Button';
@@ -10,6 +11,8 @@ export type ShortlistState = 'success' | 'loading' | 'error';
 
 export interface ShortlistScreenProps {
   state?: ShortlistState;
+  /** The prompt card's body copy — pass a fragment to highlight a clause. */
+  promptContent: ReactNode;
   suggestions: Suggestion[];
   onBack?: () => void;
   onSave?: () => void;
@@ -22,7 +25,7 @@ export interface ShortlistScreenProps {
  * the mocks (README §Interactions & Behavior calls for a 3-card skeleton
  * and a retry state) — implemented here to the same shell.
  */
-export function ShortlistScreen({ state = 'success', suggestions, onBack, onSave, onRefine, onRetry }: ShortlistScreenProps) {
+export function ShortlistScreen({ state = 'success', promptContent, suggestions, onBack, onSave, onRefine, onRetry }: ShortlistScreenProps) {
   return (
     <div style={{ flex: 1, overflowY: 'auto' }}>
       <div style={{ padding: '8px 20px 16px', display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -34,8 +37,7 @@ export function ShortlistScreen({ state = 'success', suggestions, onBack, onSave
 
       <div style={{ margin: '0 20px 18px' }}>
         <AICard variant="primary" eyebrow="Matched on your taste" decorativeCircle="bottom-right" padding={20}>
-          Three cafes near Kemang with outlets and a low-noise profile — the pattern behind your{' '}
-          <span style={{ color: 'var(--cj-amber)' }}>five highest-rated visits</span>.
+          {promptContent}
         </AICard>
       </div>
 
