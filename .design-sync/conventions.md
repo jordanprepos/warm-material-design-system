@@ -4,15 +4,15 @@ A warm-coffee-toned mobile design system. 7 composable primitives (`Button`, `Ch
 
 ### Theme
 
-Light theme needs no setup — the CSS custom properties resolve from `:root` automatically once `styles.css` loads. **For dark theme**, wrap the subtree in a plain element carrying `data-cj-theme="dark"` (there is no separate `ThemeProvider` call in this bundle — this attribute *is* the mechanism):
+Light theme needs no setup — the CSS custom properties resolve from `:root` automatically once `styles.css` loads. **For dark theme**, wrap the subtree in `ThemeProvider` (exported from the bundle; it has no preview card because it has no story):
 
 ```jsx
-<div data-cj-theme="dark" className="cj-root">
+<ThemeProvider theme="dark">
   <JournalScreen name="Jordan" streakWeeks={6} visits={visits} insightContent="You rate cafes with outlets and low noise higher." />
-</div>
+</ThemeProvider>
 ```
 
-`cj-root` sets the base font-family and `box-sizing: border-box` — include it any time you add a new theme boundary, even nested (e.g. `AICard`'s "primary" variant is intentionally a dark surface in *both* themes — that's baked into the component, not something you theme around).
+`ThemeProvider` renders `<div className="cj-root" data-cj-theme={theme}>` — so setting that class and attribute on your own element is an equivalent alternative when you need to control the wrapper element yourself. `cj-root` sets the base font-family and `box-sizing: border-box` — include it any time you add a new theme boundary, even nested (e.g. `AICard`'s "primary" variant is intentionally a dark surface in *both* themes — that's baked into the component, not something you theme around).
 
 ### Styling idiom — CSS custom properties, no utility classes
 
@@ -38,10 +38,10 @@ Read `styles.css` (imports the compiled `_ds_bundle.css`, which holds every `--c
 ### Example — composing primitives
 
 ```jsx
-<div data-cj-theme="dark" className="cj-root">
+<ThemeProvider theme="dark">
   <AICard variant="primary" eyebrow="Journal insight" decorativeCircle="top-right">
     You rate cafes with outlets and low noise{' '}
     <span style={{ color: 'var(--cj-amber)' }}>0.8 stars higher</span>.
   </AICard>
-</div>
+</ThemeProvider>
 ```
